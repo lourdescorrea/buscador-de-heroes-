@@ -1,13 +1,18 @@
 {
   "name": "heroes-spa",
+  "homepage": " https://lourdescorrea.github.io/buscador-de-heroes-/",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --verbose --coverage --runInBand",
+    "start": "node index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "gh-pages": "^5.0.0",
